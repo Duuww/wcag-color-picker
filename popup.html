@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h2>🎨 WCAG 智能取色器</h2>
+      <button id="resetBtn" title="刷新重置">↻ 重置</button>
+    </div>
+
+    <!-- 基础颜色输入 -->
+    <div class="section">
+      <div class="input-group">
+        <input type="color" id="colorPickerUI" value="#333333">
+        <input type="text" id="hexInput" value="#333333" maxlength="7">
+        <button id="eyeDropperBtn" title="从网页吸取颜色">滴管</button>
+      </div>
+    </div>
+
+    <!-- 属性设置 -->
+    <div class="section">
+      <div class="role-select">
+        <label><input type="radio" name="colorRole" value="text" checked> 这是字体颜色</label>
+        <label><input type="radio" name="colorRole" value="bg"> 这是背景颜色</label>
+      </div>
+      <div class="font-settings" id="fontSettings">
+        <label>大小(pt): <input type="number" id="fontSize" value="12" min="1" max="100"></label>
+        <label class="checkbox-label"><input type="checkbox" id="isBold"> 加粗</label>
+      </div>
+    </div>
+
+    <div class="status">
+      当前阈值要求: 对比度 ≥ <strong id="requiredRatio">4.5:1</strong>
+    </div>
+
+    <!-- 新增：实时预览区 -->
+    <div class="section preview-section">
+      <p class="desc">实时展示效果：</p>
+      <div id="previewBox" class="preview-box">
+        <span id="previewText">hello!</span>
+      </div>
+    </div>
+
+    <!-- 渐变取色板区域 -->
+    <div class="section picker-section">
+      <p class="desc" id="paletteDesc">在下方选择搭配颜色（暗色区域为不合规）：</p>
+      <input type="range" id="hueSlider" min="0" max="360" value="0">
+      <div class="canvas-container">
+        <canvas id="colorBoard" width="300" height="150"></canvas>
+        <div id="pickerPointer"></div>
+      </div>
+    </div>
+
+    <!-- 选取的颜色展示与复制 -->
+    <div class="section result-section">
+      <div class="selected-info">
+        <div id="selectedSwatch"></div>
+        <div class="selected-details">
+          <div class="selected-hex" id="selectedHex">#FFFFFF</div>
+          <div class="selected-ratio" id="selectedRatioText">对比度: 21.00:1 <span id="passBadge" class="badge pass">通过</span></div>
+        </div>
+      </div>
+      <button id="copyBtn">复制颜色</button>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

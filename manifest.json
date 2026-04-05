@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "WCAG 智能取色器",
+  "version": "1.0",
+  "description": "滴管取色、WCAG 1.4.3 对比度计算及合规颜色调色盘生成。",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "WCAG 智能取色器"
+  },
+  "minimum_chrome_version": "95"
+}
