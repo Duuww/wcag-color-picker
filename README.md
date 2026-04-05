@@ -15,6 +15,13 @@
 - 👀 **沉浸式实时预览**：自动对调前景色与背景色，并以你在插件中设置的真实字号/字重进行渲染，直观预览效果。
 - ⚡ **轻量纯粹**：基于 Manifest V3 编写，无任何第三方框架依赖，极致秒开。
 
+## 🛠️ 技术栈
+- HTML5
+- CSS3 (Flexbox & CSS Variables)
+- Vanilla JavaScript (原生 JS)
+- Canvas 2D API (像素级对比度计算与渲染)
+- Chrome Extension API (Manifest V3, EyeDropper)
+
 ## 📸 界面截图
 
 > ![预览图](./screenshot1.jpg)
