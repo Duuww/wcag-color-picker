@@ -47,7 +47,7 @@
     <!-- 渐变取色板区域 -->
     <div class="section picker-section">
       <p class="desc" id="paletteDesc">在下方选择搭配颜色（暗色区域为不合规）：</p>
-      <input type="range" id="hueSlider" min="0" max="360" value="0">
+      <input type="range" id="hueSlider" min="0" max="360" value="0" aria-labelledby="paletteDesc">
       <div class="canvas-container">
         <canvas id="colorBoard" width="300" height="150"></canvas>
         <div id="pickerPointer"></div>
