@@ -22,6 +22,13 @@
 - Canvas 2D API (像素级对比度计算与渲染)
 - Chrome Extension API (Manifest V3, EyeDropper)
 
+## 使用说明
+- 下载后的文件解压。
+- 打开chrome浏览器右上角设置-扩展程序，点击管理扩展程序
+- 点击右上角打开“开发者设置”
+- 点击左上角“加载未打包的扩展程序”，选择解压后的文件夹即可
+- 点击浏览器设置-扩展程序，即可看见wcag-color-picker，点击即可使用
+
 ## 📸 界面截图
 
 > ![预览图](./screenshot1.jpg)
